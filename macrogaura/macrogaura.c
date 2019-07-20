@@ -225,7 +225,12 @@ const int NUM_FUNCTION_RECORDS = (int)(sizeof(FUNCTION_RECORDS) / sizeof(FUNCTIO
 
 void usage() {
     printf("macrogaura - RGB keyboard control for Asus ROG laptops\n");
-    printf("(c) 2019 Le Bao Hiep\n\n");
+#ifdef MODULE_VERSION
+#define xStringify(a) Stringify(a)
+#define Stringify(a) #a
+    printf("Version %s\n\n", xStringify(MODULE_VERSION));
+#endif
+    printf("Copyright © 2019 Le Bao Hiep\n\n");
     printf("Usage:\n");
     printf("   macrogaura COMMAND ARGUMENTS\n\n");
     printf("COMMAND should be one of:\n");
