@@ -1,0 +1,5 @@
+.DS_Store
+build
+macrogaura.xcodeproj/xcuserdata/
+macrogaura.xcodeproj/xcshareddata/
+macrogaura.xcodeproj/project.xcworkspace/

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CF41DBA22E3759A007206F5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CF41DB922E3759A007206F5 /* main.c */; };
+		4CF41DBA22E3759A007206F5 /* macrogaura.c in Sources */ = {isa = PBXBuildFile; fileRef = 4CF41DB922E3759A007206F5 /* macrogaura.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4CA873DF22E3875900ABD57D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4CF41DB622E3759A007206F5 /* macrogaura */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = macrogaura; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CF41DB922E3759A007206F5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		4CF41DB922E3759A007206F5 /* macrogaura.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = macrogaura.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 			children = (
 				4CF41DB822E3759A007206F5 /* macrogaura */,
 				4CF41DB722E3759A007206F5 /* Products */,
+				4CA873DF22E3875900ABD57D /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +59,7 @@
 		4CF41DB822E3759A007206F5 /* macrogaura */ = {
 			isa = PBXGroup;
 			children = (
-				4CF41DB922E3759A007206F5 /* main.c */,
+				4CF41DB922E3759A007206F5 /* macrogaura.c */,
 			);
 			path = macrogaura;
 			sourceTree = "<group>";
@@ -118,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF41DBA22E3759A007206F5 /* main.c in Sources */,
+				4CF41DBA22E3759A007206F5 /* macrogaura.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
