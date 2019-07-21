@@ -431,7 +431,7 @@ int handleUsb(Messages *pMessages) {
     CFSetRef deviceCFSetRef= NULL;
     
     // create a IO HID Manager reference
-    tIOHIDManagerRef = IOHIDManagerCreate( kCFAllocatorDefault, kIOHIDOptionsTypeNone );
+    tIOHIDManagerRef = IOHIDManagerCreate(kCFAllocatorDefault, kIOHIDOptionsTypeNone);
     if (!tIOHIDManagerRef) goto exit;
     
     // set the HID device matching dictionary
@@ -480,7 +480,7 @@ int handleUsb(Messages *pMessages) {
 exit:
     if (deviceCFSetRef) CFRelease(deviceCFSetRef);
     if (tIOHIDDeviceRefs) free(tIOHIDDeviceRefs);
-    if (tIOHIDManagerRef) CFRelease( tIOHIDManagerRef);
+    if (tIOHIDManagerRef) CFRelease(tIOHIDManagerRef);
     return 0;
 }
 
