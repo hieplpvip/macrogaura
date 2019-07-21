@@ -6,7 +6,7 @@ Supports RGB keyboards with IDs [0b05:1854](https://linux-hardware.org/index.php
 
 ```
 Usage:
-   macrogaura COMMAND ARGUMENTS
+   macrogaura [-v] COMMAND ARGUMENTS
 
 COMMAND should be one of:
    single_static
