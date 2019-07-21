@@ -232,7 +232,7 @@ void usage() {
 #endif
     printf("Copyright © 2019 Le Bao Hiep\n\n");
     printf("Usage:\n");
-    printf("   macrogaura COMMAND ARGUMENTS\n\n");
+    printf("   macrogaura [-v] COMMAND ARGUMENTS\n\n");
     printf("COMMAND should be one of:\n");
     for (int i = 0; i < NUM_FUNCTION_RECORDS; ++i) {
         printf("   %s\n", FUNCTION_RECORDS[i].szName);
@@ -463,15 +463,16 @@ int handleUsb(Messages *pMessages) {
                     wchar_t buf[256];
                     get_string_property(dev, CFSTR(kIOHIDProductKey), buf, 256);
                     printf("Found ROG Aura keyboard: %p\n", dev);
+                    printf("  Name: %ls\n", buf);
                     printf("  VendorID: %04x\n", dev_vid);
                     printf("  ProductID: %04x\n", dev_pid);
-                    printf("  Product: %ls\n", buf);
                     // Send the messages
                     for (int i = 0; i < pMessages->nMessages; ++i) {
                         IOHIDDeviceSetReport(dev, kIOHIDReportTypeFeature, pMessages->messages[i][0], pMessages->messages[i], MESSAGE_LENGTH);
                     }
                     IOHIDDeviceSetReport(dev, kIOHIDReportTypeFeature, MESSAGE_SET[0], MESSAGE_SET, MESSAGE_LENGTH);
                     IOHIDDeviceSetReport(dev, kIOHIDReportTypeFeature, MESSAGE_APPLY[0], MESSAGE_APPLY, MESSAGE_LENGTH);
+                    V(printf("sent %d messages\n", pMessages->nMessages + 2));
                 }
             }
         }
